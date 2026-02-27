@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Pra dona Mafe...</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="amor.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Página inicial -->
+  <div id="inicio" class="container">
+    <h1>Tenho uma coisa pra te contar Cadu...</h1>
+    <button onclick="mostrarSite()">Bisbilhotar</button>
+  </div>
+
+  <!-- Página principal -->
+  <div id="principal" class="container hidden">
+
+    <!-- Mini Player estilo Spotify -->
+    <div class="mini-player">
+      <img src="capamusica.jpg" alt="Capa da música" class="cover">
+      <div class="info">
+        <div class="title">No céu dos braços teus</div>
+        <div class="artist">Di Paullo e Paulino</div>
+        <input type="range" id="progress" value="0" min="0" max="100">
+      </div>
+      <button id="playPauseBtn">▶</button>
+    </div>
+
+    <!-- Slideshow -->
+     <div class="slideshow">
+    <video src="video1.mp4" class="slide" muted loop playsinline></video>
+    <video src="video2.mp4" class="slide" muted loop playsinline></video>
+      <img src="foto1.jpeg" class="slide active">
+      <img src="foto2.jpeg" class="slide">
+      <img src="foto3.jpeg" class="slide">
+      <img src="foto4.jpeg" class="slide">
+      <img src="foto5.jpeg" class="slide">
+      <img src="foto6.jpeg" class="slide">
+      <img src="foto7.jpeg" class="slide">
+      <img src="foto8.jpeg" class="slide">
+      <img src="foto9.jpeg" class="slide">
+  
+  
+  <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+  <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+    </div>
+
+<div class="divisor-coracao">❤️</div> 
+
+    <h2 id="contador" style="font-weight: 700;"></h2>
+    <p id="texto-final">
+      Oii amor tudo bem? Espero que sim vou ser bem breve no que vou te dizer, sei que passamos por momentos difíceis mas você nunca saiu do meu lado e me mostrou que você irá sempre ficar independente doque aconteça, é isso fez com que eu me apaixonasse cada vez mais por você.
+Hoje já faz 271 dias que estamos juntos e cada vez mais tenho certeza que quero ficar com você até envelhecermos te amo pra todo sempre ❤️.
+    </p>
+
+    <div id="frases">
+  <div class="frase">
+    <p style="color: rgb(55, 0, 255);">Você pode até pensar...</p>
+    <p>"E se eu esquecesse de você todos os dias?"</p>
+    <img class="gif" src="Adam Sandler GIF by MTV Brasil.gif" alt="Como se fosse a primeira vez">
+  </div>
+
+  <div class="frase">
+    <p>"E se você tivesse que esperar?"</p>
+    <img src="GIF by GoPlay.gif" alt="Diário de uma Paixão">
+  </div>
+
+  <div class="frase">
+    <p>"E se eu me casasse com outra?"</p>
+    <img src="love kiss GIF.gif" alt="La La Land">
+  </div>
+
+  <div class="frase">
+    <p>"E se eu fosse doente?"</p>
+    <img src="comoeuera.gif" alt="La La Land">
+  </div>
+
+  <div class="frase">
+    <p>"E se não pudessémos nos tocar?"</p>
+    <img src="5passos.gif" alt="La La Land">
+  </div>
+</div>
+
+
+
+
+
+    <button onclick="voltarInicio()">Voltar</button>
+  </div>
+
+  <!-- Música -->
+  <audio id="musica" src="musica.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
