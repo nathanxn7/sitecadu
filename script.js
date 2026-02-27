@@ -34,15 +34,25 @@ let slideInterval;
 
 function iniciarSlide() {
   slides = document.querySelectorAll(".slide");
-  slides.forEach((s) => s.classList.remove("active"));
+  slides.forEach((s) => {
+    s.classList.remove("active");
+    if (s.tagName === "VIDEO") s.pause(); // Garante que todos comecem pausados
+  });
+
   index = 0;
-  slides[index].classList.add("active");
+  const primeiroSlide = slides[index];
+  primeiroSlide.classList.add("active");
+
+  // O SEGREDO: Se o primeiro slide for vídeo, dá play assim que entrar!
+  if (primeiroSlide.tagName === "VIDEO") {
+    primeiroSlide.play();
+  }
 
   if (slideInterval) clearInterval(slideInterval);
 
   slideInterval = setInterval(() => {
     mudarSlide(1);
-  }, 4000);
+  }, 5000); // 5 segundos
 }
 
 function mudarSlide(n) {
@@ -194,4 +204,5 @@ function iniciarVideos() {
   if(vSlides.length > 0) {
       vSlides[0].play();
   }
+
 }
